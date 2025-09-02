@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mysql-connector-j-9.1.0">
+    <CLASSES>
+      <root url="jar://E:/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0/mysql-connector-j-9.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../finanance Manager/.idea/libraries/jfreechart-1.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../finanance Manager/.idea/libraries/jfreechart-1.0.13.jar!/org/jfree" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
