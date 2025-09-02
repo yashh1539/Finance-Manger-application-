@@ -1,0 +1,16 @@
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,          -- Unique ID for each user
+    username VARCHAR(50) NOT NULL UNIQUE,            -- Unique username
+    password VARCHAR(255) NOT NULL,                  -- Encrypted password
+    email VARCHAR(100) UNIQUE                        -- Optional: Email for communication
+);
+CREATE TABLE Transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,   -- Unique ID for transaction
+    user_id INT NOT NULL,                            -- Reference to Users table
+    date DATE NOT NULL,                              -- Transaction date
+    type VARCHAR(10) NOT NULL CHECK (type IN ('Income','Expense')),  
+    category VARCHAR(50) NOT NULL,                   -- Category (Food, Rent, Salary, etc.)
+    amount DECIMAL(10,2) NOT NULL CHECK (amount >= 0), -- Transaction amount
+    note TEXT,                                       -- Optional note
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
